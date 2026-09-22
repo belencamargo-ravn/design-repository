@@ -1,24 +1,52 @@
 # Design & Product at Ravn: A Reflection
 
-2026-09-22 · @Belen Camargo
-
 ## What design owns
 
-Design owns the how. On Vello, that means making a Requester feel safe enough to invite a stranger into their home from a few streets away: how people browse nearby Providers, how a request becomes a booking, and what trust looks like on screen, from the verification badge to an Admin who reads as a safety net, not surveillance. These are craft decisions, grounded in how real neighbors decide to trust someone, not in a spec.
+Design owns the how. On Vello, that means:
+
+- Making it effortless to go from "I need help" to "it's booked" by the use of UX strategies for browsing Providers, sending a request, and confirming a booking.
+- Designing each screen's layout, imagery, and micro-interactions (a Provider's profile, the booking confirmation, the Admin approval view) so the app feels pleasant, not just functional.
+- Designing the trust cues, like the verification badge and the Admin's presence, so a Requester feels safe letting a stranger into their home.
+- Building engagement patterns, like rebooking a trusted Provider and post-booking nudges, that keep Requesters and Providers coming back to Vello.
+- Defining clear forward and ongoing flows so users easily understand what part of the flow they're in and can go back without confusion.
+- Handling errors in a healthy way, so mistakes (a failed booking, a declined verification) are communicated clearly and don't leave users confused or frustrated.
 
 ## What product contributes across the lifecycle
 
-Product brings the why and the constraints design can't see alone. On Vello: which service launches first and at what neighborhood size, what "verified" means before an Admin approves someone, the pricing model behind each booking, and after launch, whether people rebook the same Provider, not just whether they sign up. It's a job of context and priorities, not pixels; once it starts saying how a badge should look, that's design's job.
+Product brings the why and the constraints design can't see alone. On Vello, that means:
 
-By phase, on Vello:
+- Organizing and prioritizing what the team works on next, so design and engineering know what matters most right now.
+- Supporting the team with the business rules Vello must meet, and guiding everyone toward achieving them.
+- Defining what "verified" means before an Admin approves a Provider.
+- Defining how the pricing model behaves for each booking.
+- Running competitive analysis on platforms like TaskRabbit and Thumbtack to improve our overall approach.
+- Defining success metrics, like repeat bookings and Provider retention, so we know after launch whether a decision actually worked, not just whether people signed up.
+- Defining scope boundaries for each launch, like the first service and neighborhood size for v1, so design and engineering aren't guessing at what's in or out.
+- Defining what a Requester, Provider, and Admin are each authorized to do, since role boundaries are a business rule, not a design choice.
 
-- **Discover:** whether neighbors trust neighbors more than a big platform, and where that breaks.
-- **Define:** what's in scope for v1: first service, what "verified" means, an Admin's authority.
-- **Architect:** the lines between Requester, Provider, and Admin, and where trust and moderation live.
-- **Design (critique):** the pricing model and real neighbor language, so crits stay grounded in what's true.
-- **Validate:** after launch, repeat bookings and Provider retention per neighborhood, not just signups.
+It's a job of context and priorities, not pixels; once it starts saying how a badge should look, that's design's job.
 
-**Pushbacks to Claude's draft.** The first version discussed ownership and contribution in general PM terms, so I pushed for every section to name Vello's hyperlocal scope, three roles, and trust model directly. I also had Claude cut em dashes and jargon for plain language.
+## Mapping Product's touchpoints across the 5 lifecycle phases
+
+Product's specific role across the 5 phases for Vello:
+
+- **Discover:** Testing whether Requesters trust neighborhood Providers enough to book them over a big platform alternative, and whether Providers trust the platform and Requesters enough to offer their services, and where that trust breaks down either way.
+- **Define:** Defining v1 scope: the first service category, what each user role (Requester, Provider, Admin) can do, how payment works, and what "trust" means for our users.
+- **Architect:** Defining how the three roles flow through and communicate with each other, and what specific tasks and permissions each one has.
+- **Design (Critique):** Bringing business-rule constraints, available data, and the outcomes driving our North Star metric into design critiques, without dictating UI.
+- **Validate:** Measuring completed transactions over time as our North Star metric, tracking conversion, engagement, and adoption together, not just signups.
+
+## Pushbacks to Claude's Draft
+
+[Documenting pushbacks against generic PM boilerplate in favor of Vello's 3 roles and plain language.]
+
+- Pushed back on generic PM language in the first draft, asking every section to name Vello's hyperlocal scope, three roles (Requester, Provider, Admin), and trust model directly instead of talking about ownership and contribution in the abstract.
+- Rejected paragraph-style writing for "What design owns," asking for straight bullet points instead so each responsibility is scannable on its own.
+- Pushed each bullet further into a direct action sentence (e.g. "Making it effortless to go from 'I need help' to 'it's booked'...") rather than a label followed by an explanation.
+- Rejected the original "badge vocabulary" bullet as too narrow, replacing it with a bullet about clear forward/ongoing flow navigation, and added a separate bullet on handling errors in a healthy way, since neither was covered yet.
+- Brought my own list of what Product contributes (prioritization, business-rule support, defining "verified," pricing model, competitive analysis) instead of accepting a generic list, and only added Claude's suggestions (success metrics, launch scope boundaries, role authority) after confirming I wanted them.
+- Asked for a dedicated phase-by-phase mapping of Product's role instead of a single paragraph, and corrected the Discover phase to cover trust in both directions (Requester trusting Provider, and Provider trusting the platform/Requesters), not just one.
+- Kept the North Star metric description general ("completed transactions over time") rather than letting Claude invent a specific, unconfirmed metric definition.
 
 ## Reframing a decision: solution → problem
 
